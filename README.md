@@ -6,9 +6,9 @@ ASB-enabled Roles are standard Ansible roles that can be created from scratch fo
 
 ### How are ESB-roles different from standard roles
 
-* The is a `asb.yml` in the roles `meta/` directory -- this is the `apb.yml` metafile the APB format uses. (Currently this file does nothing in the content of this strawman -- it exists to show how ASB meta data could be stored in the Ansible role format.) Being in `meta/`, this file would be ignored by standard Ansible and Ansible Tower without side effects.
-* Each role would have multiple task files that correspond to each service broker action. See the "Mapping vs. Naming Standards" point under Further Consideration below.
-* The service broker would use a single (ideally generated) Ansible playbook such as `asb.yml` that would call the role passing in the action (a variable called `asb_action` in the example) it is to perform. 
+* Adds a `asb.yml` file in the role's `meta/` directory -- this is the `apb.yml` metafile the APB format uses. Being in `meta/`, this file would be ignored by standard Ansible and Ansible Tower without side effects. (Currently this file does nothing in the context of this strawman -- it exists to show how ASB metadata could be stored in the Ansible role format.) 
+* Each role would have multiple task files that correspond to each service broker action it implements. See the "Mapping vs. Naming Standards" point under "Further Consideration" below.
+* The service broker would use a single (ideally dynamically generated) Ansible playbook such as `/asb.yml` that would call the role, passing in the action (thru a variable called `asb_action` in the example) it is to perform. 
 
 ### Pros:
 
