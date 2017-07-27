@@ -1,0 +1,11 @@
+---
+name:  helloworld-apb
+image: myorg/helloworld-apb
+parameters:
+  - name: namespace
+    type: string
+    default: hello-world-apb
+  - name: message
+    type: string
+    default: "Hello World"
+

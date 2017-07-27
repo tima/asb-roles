@@ -1,0 +1,4 @@
+# work around for https://github.com/ansible/ansible/issues/22571
+# this file could be used as a mapping of service broker actions to task files
+---
+- include: "{{ asb_action }}.yml"
