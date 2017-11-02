@@ -12,8 +12,7 @@
         verbosity: 1
     # fails because of https://github.com/ansible/ansible/issues/22571
     # it would elminate the tasks/asb.yml hack otherwise
-    - include_role:
+    - import_role:
         name: sampleapp
         tasks_from: "{{ asb_action }}"
-      static: no
 
